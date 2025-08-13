@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aristotele Solano Cano - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .cv-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .title {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .main-content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            opacity: 0;
+            animation: slideIn 0.8s ease-out forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.2s; }
+        .section:nth-child(2) { animation-delay: 0.4s; }
+        .section:nth-child(3) { animation-delay: 0.6s; }
+        .section:nth-child(4) { animation-delay: 0.8s; }
+        .section:nth-child(5) { animation-delay: 1.0s; }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #e74c3c;
+            transition: width 0.3s ease;
+        }
+
+        .section:hover .section-title::after {
+            width: 100px;
+        }
+
+        .experience-item, .project-item {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #3498db;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .experience-item::before, .project-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .experience-item:hover::before, .project-item:hover::before {
+            left: 100%;
+        }
+
+        .experience-item:hover, .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-left-color: #e74c3c;
+        }
+
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-size: 1.1rem;
+            color: #3498db;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            color: #555;
+        }
+
+        .description ul {
+            padding-left: 20px;
+        }
+
+        .description li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .description li::marker {
+            color: #3498db;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-tag {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill-tag:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .certificate-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+
+        .certificate-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .education-item {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid #dee2e6;
+            transition: all 0.3s ease;
+        }
+
+        .education-item:hover {
+            border-color: #3498db;
+            transform: scale(1.02);
+        }
+
+        .university {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .degree {
+            font-size: 1.1rem;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .name {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+
+            .certificates-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .loading-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOut 1s ease-out 2s forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-top: 5px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loading-animation">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="container">
+        <div class="cv-card">
+            <header class="header">
+                <div class="header-content">
+                    <h1 class="name">Aristoteles Solano Cano</h1>
+                    <p class="title">Analista de Datos | Estadístico | Desarrollador</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <span>solanoaristoteles19@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                            <span>5628079490</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="contact-icon" viewBox="0 0 24 24">
+                                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+                            </svg>
+                            <a href="https://www.linkedin.com/in/aristoteles-solano-cano-231ab3266/" target="_blank" style="color: inherit; text-decoration: none;">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="main-content">
+                <section class="section">
+                    <h2 class="section-title">Experiencia Profesional</h2>
+                    
+                    <div class="experience-item">
+                        <h3 class="job-title">Unidad de Datos</h3>
+                        <p class="company">IMSS-Bienestar</p>
+                        <p class="date">01/10/2024 – A la fecha</p>
+                        <div class="description">
+                            <ul>
+                                <li>Desarrollar algoritmos y herramientas para detectar inconsistencias en indicadores de salud.</li>
+                                <li>Combinar datos de centros de salud, hospitales y registros epidemiológicos, asegurando consistencia mediante la corrección de errores, valores faltantes y formatos.</li>
+                                <li>Aplicar técnicas como regresiones y series de tiempo para estudiar tendencias de enfermedades, mortalidad, morbilidad y factores de riesgo.</li>
+                                <li>Diseñar dashboards y reportes para monitorear KPI's y evaluar el impacto de políticas y programas de prevención, incluyendo el seguimiento de abasto de medicamentos, indicadores de salud materno-infantil e infraestructura sanitaria en la Cuenca Balsas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="job-title">Unidad de Datos y Planeación Estratégica</h3>
+                        <p class="company">Comisión Federal para la Protección contra Riesgos Sanitarios</p>
+                        <p class="date">16/02/2024 – 30/09/2024</p>
+                        <div class="description">
+                            <ul>
+                                <li>Minería de datos y análisis estadístico para identificar tendencias, predicciones, e información significativa para crear visualización de datos en Dashboard para la toma de decisiones.</li>
+                                <li>Implementación de modelos ARIMA(p,d,q) para pronóstico de número de trámites resueltos.</li>
+                                <li>Automatización de procesos.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="job-title">Consultoría Estadística</h3>
+                        <p class="company">Colegio de Postgraduados</p>
+                        <p class="date">16/02/2023 – 15/02/2024</p>
+                        <div class="description">
+                            <ul>
+                                <li>Análisis estadístico de diversos productos agroalimentarios, en investigaciones de estudiantes de los postgrados Innovación Agroalimentaria Sustentable y Paisaje y Turismo Rural.</li>
+                                <li>Relación con entidades públicas y privadas.</li>
+                                <li>Coordinación y organización logística de eventos científicos como: seminarios, reuniones científicas y ferias.</li>
+                                <li>Organización de viajes de estudios.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <h3 class="job-title">Desarrollador</h3>
+                        <p class="company">Grupo Salinas</p>
+                        <p class="date">02/11/2022 - 14/02/2023</p>
+                        <div class="description">
+                            <ul>
+                                <li>Desarrollador de nuevas tecnologías de Bases de Datos en el Área de Sistema de Evaluación de Riesgos Crediticios.</li>
+                                <li>Diseño en las campañas de difusión de resultados.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Proyectos</h2>
+                    
+                    <div class="project-item">
+                        <h3 class="job-title">Ventanilla de Resolución Inmediata (VRI)</h3>
+                        <p class="company">Analista de datos</p>
+                        <p class="date">02/11/2022 - 14/02/2023</p>
+                        <div class="description">
+                            <ul>
+                                <li>Recolección, limpieza y análisis de datos regulatorios relacionados con trámites ingresados a través de VRI.</li>
+                                <li>Elaboración de reportes e indicadores clave (KPIs) para el seguimiento de tiempos de respuesta, eficiencia operativa y cumplimiento normativo.</li>
+                                <li>Apoyo en la identificación de cuellos de botella y propuestas de mejora basadas en análisis estadísticos y visualizaciones de datos.</li>
+                                <li>Automatización de procesos de seguimiento mediante herramientas de ciencia de datos (R, Excel).</li>
+                                <li>Generación de dashboards para la toma de decisiones de alto nivel, orientados a la mejora continua de la eficiencia institucional y la transparencia regulatoria.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-item">
+                        <h3 class="job-title">Automatización</h3>
+                        <p class="company">Desarrollador</p>
+                        <p class="date">02/11/2022 - 14/02/2023</p>
+                        <div class="description">
+                            <ul>
+                                <li>Desarrollador nuevas metodologías para la limpieza y normalización de Bases de Datos en el Área de Sistema de Evaluación de Riesgos Crediticios.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Habilidades</h2>
+                    <div class="skills-grid">
+                        <div class="skill-tag">R</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">SQL</div>
+                        <div class="skill-tag">SAS</div>
+                        <div class="skill-tag">C++</div>
+                        <div class="skill-tag">GitHub</div>
+                        <div class="skill-tag">Tableau</div>
+                        <div class="skill-tag">Power BI</div>
+                        <div class="skill-tag">Looker Studio</div>
+                        <div class="skill-tag">QGIS</div>
+                        <div class="skill-tag">Excel</div>
+                        <div class="skill-tag">LaTeX</div>
+                        <div class="skill-tag">Trabajo en equipo</div>
+                        <div class="skill-tag">Liderazgo</div>
+                        <div class="skill-tag">Proactivo</div>
+                        <div class="skill-tag">Comunicación</div>
+                        <div class="skill-tag">Comprometido</div>
+                        <div class="skill-tag">Aprendizaje rápido</div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Certificados y Diplomas</h2>
+                    <div class="certificates-grid">
+                        <div class="certificate-item">
+                            <strong>Diplomado en Regulación y Riesgos Sanitarios</strong> - 2024
+                        </div>
+                        <div class="certificate-item">
+                            <strong>Certificado de Análisis de datos con Google Sheets y Looker Studio</strong> - 2024
+                        </div>
+                        <div class="certificate-item">
+                            <strong>Certificado de participación en el Seminario Internacional del XII Encuentro INNOVAGRO</strong> - 2023
+                        </div>
+                        <div class="certificate-item">
+                            <strong>Constancias de apoyo y diseño logístico en Innovando Conciencia</strong> - 2023
+                        </div>
+                        <div class="certificate-item">
+                            <strong>Constancia de asistencia al Foro Global Agroalimentario</strong> - 2023
+                        </div>
+                        <div class="certificate-item">
+                            <strong>Constancia de Modelos de simulación de riesgos financieros</strong> - 2023
+                        </div>
+                        <div class="certificate-item">
+                            <strong>Constancia de Prevención de Lavado de Dinero y Financiamiento al Terrorismo</strong> - 2022
+                        </div>
+                        <div class="certificate-item">
+                            <strong>Reconocimiento de participación en el IV aniversario del programa de Estadística y Calculo en el COLPOS</strong> - 2017
+                        </div>
+                        <div class="certificate-item">
+                            <strong>Reconocimiento de participación en el 31 Foro Internacional de Estadística</strong> - 2017
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <h2 class="section-title">Formación Académica</h2>
+                    <div class="education-item">
+                        <h3 class="university">Universidad Autónoma Chapingo</h3>
+                        <p class="degree">Licenciatura en Estadística</p>
+                        <p class="date">2016-2021</p>
+                    </div>
+                </section>
+            </main>
+
+            <footer class="footer">
+                <p>&copy; 2024 Aristoteles Solano Cano. Todos los derechos reservados.</p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for scroll animations
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Add typing effect to name
+        const nameElement = document.querySelector('.name');
+        const originalText = nameElement.textContent;
+        nameElement.textContent = '';
+        
+        setTimeout(() => {
+            let i = 0;
+            const typeWriter = () => {
+                if (i < originalText.length) {
+                    nameElement.textContent += originalText.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                }
+            };
+            typeWriter();
+        }, 2500);
+
+        // Add particle effect to header
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.style.cssText = `
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background: rgba(255,255,255,0.6);
+                border-radius: 50%;
+                pointer-events: none;
+                animation: float 6s linear infinite;
+            `;
+            
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            
+            document.querySelector('.header').appendChild(particle);
+            
+            setTimeout(() => {
+                particle.remove();
+            }, 6000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 300);
+
+        // Add CSS for particle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0% {
+                    transform: translateY(100vh) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 1;
+                }
+                90% {
+                    opacity: 1;
+                }
+                100% {
+                    transform: translateY(-100px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
+

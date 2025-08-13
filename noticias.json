@@ -1,0 +1,211 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Nuevo Rol en IMSS-Bienestar como Especialista en Unidad de Datos",
+      "fecha": "2024-10-01",
+      "categoria": "Experiencia Profesional",
+      "descripcion": "Aristotele Solano Cano se incorpora al IMSS-Bienestar en la Unidad de Datos, donde desarrollará algoritmos y herramientas para detectar inconsistencias en indicadores de salud.",
+      "detalles": [
+        "Desarrollo de algoritmos para detectar inconsistencias en indicadores de salud",
+        "Combinación de datos de centros de salud, hospitales y registros epidemiológicos",
+        "Aplicación de técnicas de regresión y series de tiempo",
+        "Diseño de dashboards para monitoreo de KPI's de salud"
+      ],
+      "empresa": "IMSS-Bienestar",
+      "puesto": "Unidad de Datos",
+      "estado": "Activo"
+    },
+    {
+      "id": 2,
+      "titulo": "Finalización Exitosa en COFEPRIS - Unidad de Datos y Planeación Estratégica",
+      "fecha": "2024-09-30",
+      "categoria": "Experiencia Profesional",
+      "descripcion": "Culmina exitosamente su participación en la Comisión Federal para la Protección contra Riesgos Sanitarios, implementando modelos ARIMA para pronósticos.",
+      "detalles": [
+        "Minería de datos y análisis estadístico para identificar tendencias",
+        "Implementación de modelos ARIMA(p,d,q) para pronóstico de trámites",
+        "Creación de dashboards para toma de decisiones",
+        "Automatización de procesos regulatorios"
+      ],
+      "empresa": "COFEPRIS",
+      "puesto": "Unidad de Datos y Planeación Estratégica",
+      "estado": "Completado"
+    },
+    {
+      "id": 3,
+      "titulo": "Obtención de Diplomado en Regulación y Riesgos Sanitarios",
+      "fecha": "2024-12-01",
+      "categoria": "Certificación",
+      "descripcion": "Aristotele obtiene el Diplomado en Regulación y Riesgos Sanitarios, fortaleciendo su expertise en el sector salud.",
+      "detalles": [
+        "Especialización en regulación sanitaria",
+        "Conocimientos avanzados en gestión de riesgos",
+        "Aplicación práctica en el sector salud público"
+      ],
+      "institucion": "Institución Certificadora",
+      "tipo": "Diplomado",
+      "estado": "Completado"
+    },
+    {
+      "id": 4,
+      "titulo": "Certificación en Análisis de Datos con Google Sheets y Looker Studio",
+      "fecha": "2024-11-15",
+      "categoria": "Certificación",
+      "descripcion": "Obtiene certificación especializada en herramientas de Google para análisis y visualización de datos.",
+      "detalles": [
+        "Dominio avanzado de Google Sheets para análisis",
+        "Creación de dashboards en Looker Studio",
+        "Visualización de datos empresariales",
+        "Automatización de reportes"
+      ],
+      "institucion": "Google",
+      "tipo": "Certificación",
+      "estado": "Completado"
+    },
+    {
+      "id": 5,
+      "titulo": "Consultoría Estadística en Colegio de Postgraduados",
+      "fecha": "2024-02-15",
+      "categoria": "Experiencia Profesional",
+      "descripcion": "Finaliza exitosamente su período como consultor estadístico, brindando análisis especializados en productos agroalimentarios.",
+      "detalles": [
+        "Análisis estadístico de productos agroalimentarios",
+        "Investigación en Innovación Agroalimentaria Sustentable",
+        "Coordinación de eventos científicos",
+        "Organización logística de seminarios y ferias"
+      ],
+      "empresa": "Colegio de Postgraduados",
+      "puesto": "Consultor Estadístico",
+      "estado": "Completado"
+    },
+    {
+      "id": 6,
+      "titulo": "Participación en Seminario Internacional INNOVAGRO 2023",
+      "fecha": "2023-11-20",
+      "categoria": "Evento Académico",
+      "descripcion": "Participación destacada en el XII Encuentro INNOVAGRO, fortaleciendo conocimientos en innovación agroalimentaria.",
+      "detalles": [
+        "Intercambio de conocimientos internacionales",
+        "Networking con expertos del sector",
+        "Actualización en tendencias agroalimentarias",
+        "Certificado de participación obtenido"
+      ],
+      "evento": "XII Encuentro INNOVAGRO",
+      "tipo": "Seminario Internacional",
+      "estado": "Completado"
+    },
+    {
+      "id": 7,
+      "titulo": "Proyecto VRI - Ventanilla de Resolución Inmediata",
+      "fecha": "2023-02-14",
+      "categoria": "Proyecto",
+      "descripcion": "Finalización exitosa del proyecto de análisis de datos para la Ventanilla de Resolución Inmediata, mejorando la eficiencia regulatoria.",
+      "detalles": [
+        "Recolección y limpieza de datos regulatorios",
+        "Elaboración de KPIs para seguimiento operativo",
+        "Identificación de cuellos de botella",
+        "Automatización de procesos con R y Excel",
+        "Generación de dashboards ejecutivos"
+      ],
+      "tipo": "Proyecto de Datos",
+      "rol": "Analista de Datos",
+      "estado": "Completado"
+    },
+    {
+      "id": 8,
+      "titulo": "Desarrollo en Grupo Salinas - Sistema de Evaluación de Riesgos",
+      "fecha": "2023-02-14",
+      "categoria": "Experiencia Profesional",
+      "descripcion": "Culmina su participación como desarrollador en Grupo Salinas, implementando nuevas tecnologías de bases de datos.",
+      "detalles": [
+        "Desarrollo de tecnologías de bases de datos",
+        "Sistema de Evaluación de Riesgos Crediticios",
+        "Diseño de campañas de difusión",
+        "Metodologías de limpieza de datos"
+      ],
+      "empresa": "Grupo Salinas",
+      "puesto": "Desarrollador",
+      "estado": "Completado"
+    },
+    {
+      "id": 9,
+      "titulo": "Graduación - Licenciatura en Estadística",
+      "fecha": "2021-12-15",
+      "categoria": "Educación",
+      "descripcion": "Obtiene el título de Licenciado en Estadística por la Universidad Autónoma Chapingo, culminando 5 años de formación académica.",
+      "detalles": [
+        "Formación integral en estadística aplicada",
+        "Especialización en análisis de datos",
+        "Metodologías de investigación cuantitativa",
+        "Fundamentos matemáticos y estadísticos"
+      ],
+      "institucion": "Universidad Autónoma Chapingo",
+      "titulo": "Licenciatura en Estadística",
+      "periodo": "2016-2021",
+      "estado": "Completado"
+    },
+    {
+      "id": 10,
+      "titulo": "Reconocimiento en el 31 Foro Internacional de Estadística",
+      "fecha": "2017-10-15",
+      "categoria": "Reconocimiento",
+      "descripcion": "Obtiene reconocimiento por su participación destacada en el 31 Foro Internacional de Estadística.",
+      "detalles": [
+        "Participación en foro internacional",
+        "Intercambio académico especializado",
+        "Networking profesional",
+        "Reconocimiento oficial obtenido"
+      ],
+      "evento": "31 Foro Internacional de Estadística",
+      "tipo": "Reconocimiento",
+      "estado": "Completado"
+    }
+  ],
+  "estadisticas": {
+    "total_noticias": 10,
+    "experiencias_profesionales": 4,
+    "certificaciones": 2,
+    "proyectos": 1,
+    "eventos_academicos": 1,
+    "reconocimientos": 1,
+    "educacion": 1
+  },
+  "categorias": [
+    "Experiencia Profesional",
+    "Certificación",
+    "Proyecto",
+    "Evento Académico",
+    "Reconocimiento",
+    "Educación"
+  ],
+  "habilidades_destacadas": [
+    "R",
+    "Python",
+    "SQL",
+    "SAS",
+    "C++",
+    "GitHub",
+    "Tableau",
+    "Power BI",
+    "Looker Studio",
+    "QGIS",
+    "Excel",
+    "LaTeX"
+  ],
+  "sectores_experiencia": [
+    "Salud Pública",
+    "Regulación Sanitaria",
+    "Agroalimentario",
+    "Servicios Financieros",
+    "Análisis de Datos",
+    "Automatización de Procesos"
+  ],
+  "contacto": {
+    "email": "solanoaristoteles19@gmail.com",
+    "telefono": "5628079490",
+    "linkedin": "https://www.linkedin.com/in/aristoteles-solano-cano-231ab3266/"
+  },
+  "ultima_actualizacion": "2024-12-13"
+}
+
